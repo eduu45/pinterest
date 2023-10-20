@@ -1,0 +1,44 @@
+.bar-container {
+    background-color: #ffffff;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.list li {
+    font-size: 20px;
+    margin-left: 200px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.list li:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.perfil-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+
+.foto-perfil {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
