@@ -1,0 +1,62 @@
+.navbar{
+    background-color: white;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.list li{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 200px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.list li:hover {
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    height: 50px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 90px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.titulo {
+    display: flex; /* Para que los elementos se alineen en una fila */
+    align-items: center; /* Para alinear verticalmente los elementos del div .titulo */
+  }
+
+.perfil-container{
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 1470px;
+    position: absolute;
+}
+
+
+.foto-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
