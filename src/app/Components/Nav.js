@@ -1,8 +1,17 @@
+"use client"
 import React from "react";
 import '../Styles/StylesNav.css'
+import  {useRouter} from "next/navigation";
 
-const Nav = () =>{
+
+
+function Nav(){
+    const router = useRouter()
+     const hanleClick = () =>{
+        router.push("/share");
+     }
     return(
+        <>
         <nav className="navbar">
             <div className="titulo">
                 <img src="/Images/logopinterest.png" alt="" className="logo"/>
@@ -13,10 +22,17 @@ const Nav = () =>{
             </div>
 
             <ul className="list">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Crear</a></li>
+                <li>
+                        <a>Home</a>
+                </li>
+                <li>
+
+                    <a href="/share">Share</a>
+                </li>
             </ul>
         </nav>
+            </>
     );
 };
 export default Nav;
+
