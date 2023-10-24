@@ -2,13 +2,24 @@
 import React, { useState } from "react";
 import "../Styles/StylesShare.css";
 import axios from "axios";
-
+import { useRouter } from 'next/navigation'
 const Share = () => {
-    const [elements, setElements] = useState({ avatarimage: null });
+    const navigation=useRouter()
+    const [elements, setElements] = useState({ avatarimage: null ,notename:null});
 
     const onInputChange = (event) => {
         const selectedImage = event.target.files[0];
-        setElements({ avatarimage: selectedImage });
+        setElements(x=>{return {...x,avatarimage: selectedImage}});
+
+    }
+    const handlesubmit=async()=>{
+        const formData=new FormData()
+        formData.append("username","ana")
+        formData.append("namenote",elements.notename)
+        formData.append("imagenPublication",elements.avatarimage)
+        const res=  await  axios.patch("http://localhost:84/users/",formData)
+         navigation.push("/")
+        console.log(res.data)
     }
 
     return (
@@ -22,8 +33,11 @@ const Share = () => {
                     <div className="texto">Recomendamos usar archivos .jpg de alta calidad con un tamaño inferior a 20 MB</div>
                 </div>
                 <div className="add-title" id="fixed-elements">
-                    <input type={"text"} placeholder={"AGREGA UN TITULO"} />
-                    <button className="custom-button">Agregar foto</button>
+                    <input type={"text"} name="name" onChange={(e)=>{
+                        setElements(x=>{return {...x,notename: e.target.value}})
+
+                    }} placeholder={"AGREGA UN TITULO"} />
+                    <button className="custom-button"  onClick={handlesubmit}>Agregar foto</button>
                 </div>
             </div>
         </div>

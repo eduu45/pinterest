@@ -1,79 +1,37 @@
-import React from "react";
+"use client"
+import React, {useEffect, useState} from "react";
 import '/src/app/Styles/StylesBody.css'
+import axios from "axios";
 
 const Body = () =>{
+    const [elements,setElements]=useState({publications:[],publicationbod:null})
+    useEffect(()=>{
+         axios.get("http://localhost:84/users/?username=ana").then((res)=>{
+             setElements(x=>{return{...x,publications: res.data.data}})
+             console.log(res.data.data)
+         })
+
+
+
+
+
+    },[])
+
     return(
         <div className="cuerpo">
             <div className="Bienvenida">
                 <div className="Bienvenida-usuarios">Bienvenido a tu feed</div>
             </div>
             <div className="container" >
-                <div className="card">
+                {elements.publications.map(x=><div className="card">
                     <div className="nombre">Karen</div>
                     <div className="user">
                         <img src="/Images/usuario.png" alt="" className="user-image"/>
                     </div>
-                    <img src="/Images/pastel.jpeg" alt=""/>
-                    <div className="title">Pastel De cumpleaños</div>
-                </div>
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/pato.jpeg" alt=""/>
-                    <div className="title">Pato</div>
-                </div>
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/babyyoda.jpeg" alt=""/>
-                    <div className="title">Baby yoda</div>
-                </div>
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/guaguau.jpeg" alt=""/>
-                    <div className="title">Cachorros lindos</div>
-                </div>
-            </div>
-            <div className="container" >
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/ranita.jpeg" alt="" className="background-image"/>
-                    <div className="title">Ranita</div>
-                </div>
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/edificio.jpeg" alt=""/>
-                    <div className="title">Asterik</div>
-                </div>
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/pollo.jpeg" alt=""/>
-                    <div className="title">Un pollo con un celular</div>
-                </div>
-                <div className="card">
-                    <div className="nombre">Karen</div>
-                    <div className="user">
-                        <img src="/Images/usuario.png" alt="" className="user-image"/>
-                    </div>
-                    <img src="/Images/fondopatitos.jpeg" alt=""/>
-                    <div className="title">Fondosss</div>
-                </div>
+                    <img src={x.imagenpublication} alt=""/>
+                    <div className="title">{x.namenote}</div>
+                </div>)
+                }
             </div>
         </div>
     )}
