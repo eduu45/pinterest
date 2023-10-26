@@ -113,8 +113,8 @@ input::placeholder{
 
 .circle {
     background-color: #ff1d1d;
-    margin-top: 180px;
-    height: 60px;
+    margin-top: 200px;
+    height: 130px;
     width: 200px;
     border: none;
     border-radius: 30px;
@@ -137,6 +137,9 @@ button.custom-button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-left:370px;
+    margin-left:510px;
+    text-align: center;
+    height: 40px;
+    width: 190px;
     margin-top: 1px;
 }

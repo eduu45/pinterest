@@ -1,7 +1,7 @@
 .Bienvenida .Bienvenida-usuarios{
     color: black;
     font-size: 25px;
-    margin-top: 140px;
+    margin-top: 148px;
     text-align: center;
     white-space: nowrap;
     margin-left: 30px;
@@ -17,34 +17,33 @@
 }
 
 .container{
-    width: 100%; /* Ajusta esto según tus necesidades */
+    width: 100%;
     max-width: 1568px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
-    margin-right: 0; /* Elimina el margen derecho para que estén en la misma fila */
-    margin-left: 55px;
+    margin-right: 0;
+    margin-left: 120px;
     align-items: center;
     height: 50vh;
 }
 
 .container .card{
-    width: 330px;
-    height: 390px;
+    width: 340px;
+    height: 400px;
     overflow: hidden;
     text-align: center;
     transition: 0.5s ease;
     cursor: pointer;
-    background-color: #000000;
     border-radius: 50px;
     margin: 0 25px; /* con este se separan las tarjetas*/
     position: relative;
 }
 
-/* Ajusta el tamaño de la imagen, el párrafo y el enlace según el tamaño de las tarjetas */
+
 .container .card img {
-    width: 350px; /* Ajusta el ancho de las tarjetas según tus necesidades */
+    width: 350px;
     height: 390px;
 }
 
@@ -151,8 +150,8 @@
     border-radius: 50%;
     background-color: white;
     overflow: hidden;
-    transition: opacity 0.3s; /* Agregamos una transición para suavizar el efecto. */
-    opacity: 0; /* Inicialmente, la imagen de usuario está oculta. */
+    transition: opacity 0.3s;
+    opacity: 0;
 }
 
 .nombre{
@@ -166,8 +165,8 @@
     font-size: 18px;
     color: white;
     overflow: hidden;
-    transition: opacity 0.3s; /* Agregamos una transición para suavizar el efecto. */
-    opacity: 0; /* Inicialmente, la imagen de usuario está oculta. */
+    transition: opacity 0.3s;
+    opacity: 0;
 }
 
 .card:hover .nombre{
@@ -175,5 +174,5 @@
 }
 
 .card:hover .user {
-    opacity: 1; /* Cuando el cursor está sobre la tarjeta, mostramos la imagen de usuario. */
+    opacity: 1;
 }

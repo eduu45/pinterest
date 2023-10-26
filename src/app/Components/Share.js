@@ -13,8 +13,9 @@ const Share = () => {
 
     }
     const handlesubmit=async()=>{
+        const namev=sessionStorage.getItem("username")?sessionStorage.getItem("username"):"ana"
         const formData=new FormData()
-        formData.append("username","ana")
+        formData.append("username",namev)
         formData.append("namenote",elements.notename)
         formData.append("imagenPublication",elements.avatarimage)
         const res=  await  axios.patch("http://localhost:84/users/",formData)
@@ -27,7 +28,7 @@ const Share = () => {
             <div className="left-column">
                 <div className="login-box" style={{ backgroundImage: `url(${elements.avatarimage ? URL.createObjectURL(elements.avatarimage) : 'https://images.mubicdn.net/static/images/avatar.png'})`, backgroundSize: 'cover' }}>
                     <label htmlFor='nuestroinput' className='circle'>
-                        subir
+                        agregar foto
                         <input id='nuestroinput' accept='image/*' className='addfile' onChange={onInputChange} type='file' name="avatarimage" placeholder='elige un archivo'></input>
                     </label>
                     <div className="texto">Recomendamos usar archivos .jpg de alta calidad con un tamaño inferior a 20 MB</div>
@@ -37,7 +38,8 @@ const Share = () => {
                         setElements(x=>{return {...x,notename: e.target.value}})
 
                     }} placeholder={"AGREGA UN TITULO"} />
-                    <button className="custom-button"  onClick={handlesubmit}>Agregar foto</button>
+                    <button className="custom-button"  onClick={handlesubmit}>Subir Publicación</button>
+
                 </div>
             </div>
         </div>

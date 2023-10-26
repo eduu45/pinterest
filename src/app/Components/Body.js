@@ -6,15 +6,11 @@ import axios from "axios";
 const Body = () =>{
     const [elements,setElements]=useState({publications:[],publicationbod:null})
     useEffect(()=>{
-         axios.get("http://localhost:84/users/?username=ana").then((res)=>{
+        const namev=sessionStorage.getItem("username")?sessionStorage.getItem("username"):"ana"
+         axios.get(`http://localhost:84/users/?username=${namev}`).then((res)=>{
              setElements(x=>{return{...x,publications: res.data.data}})
              console.log(res.data.data)
          })
-
-
-
-
-
     },[])
 
     return(
