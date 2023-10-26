@@ -38,7 +38,7 @@ const Share = () => {
                         setElements(x=>{return {...x,notename: e.target.value}})
 
                     }} placeholder={"AGREGA UN TITULO"} />
-                    <button className="custom-button"  onClick={handlesubmit}>Subir Publicación</button>
+                    <button className="custom-button"  onClick={handlesubmit}>Subir imagen</button>
 
                 </div>
             </div>

@@ -120,10 +120,11 @@ input::placeholder{
     border-radius: 30px;
     cursor: pointer;
     color: white;
-    font-weight: bold;
     text-align: center;
     font-size: 20px;
     transition: background-color 0.3s;
+    white-space: nowrap;
+    font-weight: bold;
 }
 
 .circle:hover {

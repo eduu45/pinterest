@@ -23,11 +23,11 @@ function Nav(){
 
             <ul className="list">
                 <li>
-                        <a>Home</a>
+                        <a>Inicio</a>
                 </li>
                 <li>
 
-                    <a href="/share">Share</a>
+                    <a href="/share">Crear</a>
                 </li>
             </ul>
         </nav>
