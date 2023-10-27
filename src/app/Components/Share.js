@@ -19,7 +19,7 @@ const Share = () => {
         formData.append("namenote",elements.notename)
         formData.append("imagenPublication",elements.avatarimage)
         const res=  await  axios.patch("http://localhost:84/users/",formData)
-         navigation.push("/")
+         navigation.push("/body")
         console.log(res.data)
     }
 

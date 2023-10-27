@@ -14,7 +14,7 @@ html body{
     background-color: #ffffff;
     border-radius: 15px;
     height: 550px;
-    width: 350px;
+    width: 500px;
     position: relative;
     overflow: hidden;
 
@@ -109,8 +109,9 @@ html body{
     padding: 20px 20px;
     background-color: #c8232b96;
     border-bottom: 30px #ffffff;
-    width: 100%;
+    width: 70%;
     font-size: 12px;
+    margin-left: 50px;
 }
 .signup .form-holder .input2 {
     position: absolute;
@@ -122,8 +123,9 @@ html body{
     border-radius: 10px;
     background-color: #c8232b96;
     border-bottom: 30px #ffffff;
-    width: 100%;
+    width: 70%;
     font-size: 12px;
+    margin-left: 50px;
 }
 
 .signup .form-holder .input3 {
@@ -136,8 +138,9 @@ html body{
     border-radius: 10px;
     background-color: #c8232b96;
     border-bottom: 30px #ffffff;
-    width: 100%;
+    width: 70%;
     font-size: 12px;
+    margin-left: 50px;
 }
 
 .signup .form-holder .input:last-child {

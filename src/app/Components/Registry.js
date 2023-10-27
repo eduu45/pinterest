@@ -24,6 +24,9 @@ function Registro() {
             name: loginform.username, email: loginform.email, password: loginform.password
         })
         console.log(res.data)
+        if(res.data.success){
+            navigation.replace("/login")
+        }
 
         console.log(loginform.password)
     }
@@ -45,7 +48,7 @@ function Registro() {
                         <input  onChange={onInputChnage} type="email" class="input2" name="email" placeholder="Email" />
                         <input  onChange={onInputChnage}type="password" class="input3" name="password" placeholder="Password" />
                     </div>
-                     <a className="submit-btn" href="/login">Inicar </a>
+                     <a className="submit-btn" onClick={handelsubmit}>Inicar </a>
                 </div>
                 <div class="login slide-up">
                     <div class="center">

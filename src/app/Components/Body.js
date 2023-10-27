@@ -4,13 +4,14 @@ import '/src/app/Styles/StylesBody.css'
 import axios from "axios";
 
 const Body = () =>{
-    const [elements,setElements]=useState({publications:[],publicationbod:null})
+    const [elements,setElements]=useState({publications:[],publicationbod:null,nameusers:sessionStorage.getItem("username")})
     useEffect(()=>{
         const namev=sessionStorage.getItem("username")?sessionStorage.getItem("username"):"ana"
          axios.get(`http://localhost:84/users/?username=${namev}`).then((res)=>{
              setElements(x=>{return{...x,publications: res.data.data}})
              console.log(res.data.data)
          })
+        setElements(x=>{return{...x,nameusers: sessionStorage.getItem("username")}})
     },[])
 
     return(
@@ -20,7 +21,7 @@ const Body = () =>{
             </div>
             <div className="container" >
                 {elements.publications.map(x=><div className="card">
-                    <div className="nombre">Karen</div>
+                    <div className="nombre">{elements.nameusers}</div>
                     <div className="user">
                         <img src="/Images/usuario.png" alt="" className="user-image"/>
                     </div>
