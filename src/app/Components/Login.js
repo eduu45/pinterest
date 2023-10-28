@@ -44,20 +44,12 @@ const Login = () => {
                     <h2 className="form-title" id="signup"><span></span>Login</h2>
                     <div   className="form-holder">
                         <input type="text" className="input" onChange={onInputChange} name="email" placeholder="Username" />
-                        <input  type="password" className="input3" onChange={onInputChange} name="password" placeholder="Password" />
+                        <input  type="password" className="input2" onChange={onInputChange} name="password" placeholder="Password" />
                     </div>
                     <a className="submit-btn" onClick={handleSubmit}>Iniciar </a>
+                    
                 </div>
-                <div className="login slide-up">
-                    <div className="center">
-
-                        <div className="form-holder">
-                            <input type="email" className="input" placeholder="Email" />
-                            <input type="password" className="input" placeholder="Password" />
-                        </div>
-                        <button className="submit-btn">inicia</button>
-                    </div>
-                </div>
+              
             </div>
         </div>
 )

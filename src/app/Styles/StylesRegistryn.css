@@ -35,8 +35,8 @@ html body{
 
 .avatar {
     position: absolute;
-    top: -50%;
-    left: 10%;
+    top: -40%;
+    left: 16%;
     width: 200px;
     height: 100px;
     border-radius: 80px;
@@ -102,6 +102,7 @@ html body{
     -webkit-transition: all .3s ease;
 }
 
+
 .signup .form-holder .input {
     display: block;
     height: 20px;
@@ -112,6 +113,7 @@ html body{
     width: 70%;
     font-size: 12px;
     margin-left: 50px;
+    border-radius: 10px;
 }
 .signup .form-holder .input2 {
     position: absolute;
@@ -151,18 +153,35 @@ html body{
     color: #ffffffc7;
 }
 
+.signup .form-holder .input2:last-child {
+    border-bottom: 0;
+}
+
+.signup .form-holder .input2::-webkit-input-placeholder {
+    color: #ffffffc7;
+}
+
+.signup .form-holder .input3:last-child {
+    border-bottom: 0;
+}
+
+.signup .form-holder .input3::-webkit-input-placeholder {
+    color: #ffffffc7;
+}
+
 .signup .submit-btn {
     position: Relative;
     top: 90px;
     background-color: #ffffff;
     color: #000000;
-    border: 6%;
+    margin-top: 10%;
+    border: solid #C8232C 3px;
     border-color: #C8232C;
     border-radius: 15px;
     display: block;
     margin: 15px auto;
     padding: 15px 45px;
-    width: 100%;
+    width: 40%;
     font-size: 13px;
     font-weight: bold;
     cursor: pointer;
@@ -170,103 +189,28 @@ html body{
     visibility: visible;
     -webkit-transition: all .3s ease;
 }
+
 
 .signup .submit-btn:hover {
     transition: all .3s ease;
     background-color: #c8232b8c;
 }
-
-.login {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    z-index: 5;
-    -webkit-transition: all .3s ease;
+.submit-btn{
+margin-top: 10%;
 }
 
-.login::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: -20px;
-    -webkit-transform: translate(-50%, 0);
-    background-color: #fff;
-    width: 200%;
-    height: 250px;
-    border-radius: 50%;
-    z-index: 4;
-    -webkit-transition: all .3s ease;
-}
+.signup .submit-btn2 {
+    position: Relative;
+    top: 120px;
+    background-color: #ffffff;
+    color: #000000;
+    margin-top: 10%;
 
-.login .center {
-    position: absolute;
-    top: calc(50% - 10%);
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    width: 65%;
-    z-index: 5;
-    -webkit-transition: all .3s ease;
-}
-
-.login .center .form-title {
-    color: #000;
-    font-size: 1.7em;
-    text-align: center;
-}
-
-.login .center .form-title span {
-    color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all .3s ease;
-}
-
-.login .center .form-holder {
-    border-radius: 15px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    overflow: hidden;
-    margin-top: 50px;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all .3s ease;
-}
-
-.login .center .form-holder .input {
-    border: 0;
-    outline: none;
-    box-shadow: none;
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    padding: 8px 15px;
-    border-bottom: 5px solid #eee;
-    width: 100%;
-    font-size: 12px;
-}
-
-.login .center .form-holder .input:last-child {
-    border-bottom: 0;
-}
-
-.login .center .form-holder .input::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.4);
-}
-
-.login .center .submit-btn {
-    position: absolute;
-    top: 50px;
-    background-color: #C8232C;
-    color: rgba(256, 256, 256, 0.7);
-    border: 0;
     border-radius: 15px;
     display: block;
     margin: 15px auto;
     padding: 15px 45px;
-    width: 100%;
+    width: 70%;
     font-size: 13px;
     font-weight: bold;
     cursor: pointer;
@@ -274,41 +218,13 @@ html body{
     visibility: visible;
     -webkit-transition: all .3s ease;
 }
-
-.login .center .submit-btn:hover {
+.signup .submit-btn2:hover {
     transition: all .3s ease;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #c8232b3d;
 }
 
-.login.slide-up {
-    top: 90%;
-    -webkit-transition: all .3s ease;
-}
 
-.login.slide-up .center {
-    top: 10%;
-    -webkit-transform: translate(-50%, 0%);
-    -webkit-transition: all .3s ease;
-}
 
-.login.slide-up .form-holder,
-.login.slide-up .submit-btn {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all .3s ease;
-}
-
-.login.slide-up .form-title {
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    -webkit-transition: all .3s ease;
-}
-
-.login.slide-up .form-title span {
-    margin-right: 5px;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all .3s ease;
+.separar-button{
+    margin-top: 10%;
 }

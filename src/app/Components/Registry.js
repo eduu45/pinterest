@@ -8,11 +8,14 @@ import {useState} from "react";
 import '../Styles/StylesRegistryn.css'
 import { useRouter } from 'next/navigation'
 
+
 function Registro() {
     const navigation=useRouter()
-    const hanleClick = () =>{
-        router.push("/login");
+    const handleClick = () =>{
+        navigation.push("/login");
     }
+
+
 
 
     const [loginform,setLoginForm]=useState({username:null,email:null,password:null})
@@ -47,19 +50,23 @@ function Registro() {
                         <input onChange={onInputChnage} type="text" class="input" name="username" placeholder="Name" />
                         <input  onChange={onInputChnage} type="email" class="input2" name="email" placeholder="Email" />
                         <input  onChange={onInputChnage}type="password" class="input3" name="password" placeholder="Password" />
-                    </div>
-                     <a className="submit-btn" onClick={handelsubmit}>Inicar </a>
-                </div>
-                <div class="login slide-up">
-                    <div class="center">
 
-                        <div class="form-holder">
-                            <input type="email" class="input" placeholder="Email" />
-                            <input type="password" class="input" placeholder="Password" />
-                        </div>
-                        <button class="submit-btn">inicia</button>
                     </div>
+                    <div className="separar-button">
+                    <button className="submit-btn" onClick={handelsubmit}>
+                        Inicar
+                         </button>
+                        <button onClick={handleClick} className="submit-btn2">
+                            Ya tienes cuenta?
+                        </button>
+                    </div>
+                    <></>
+                   
+                 <></>
                 </div>
+               
+              
+            
             </div>
         </div>
 
